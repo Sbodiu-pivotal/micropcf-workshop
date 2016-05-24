@@ -1,26 +1,23 @@
-# micropcf-workshop
-Getting Started with microPCF
+# PCFDev Workshop
+Getting Started with PCFDev
 
 
-micropcf
->MicroPCF is the simplest way to get a complete Cloud Foundry on a single machine
+PCFDev
+>PCFDev is the simplest way to get a complete Cloud Foundry on a single machine
 
-Get in touch with team [GitHub](https://github.com/pivotal-cf/micropcf) [Slack](https://pivotal.slack.com/messages/micropcf/)
+Get in touch with team [GitHub](https://github.com/pivotal-cf/pcfdev) [Slack](https://pivotal.slack.com/messages/pcfdev/)
 
 
 Setup
-You can set up micropcf to easily:
+You can set up pcfdev to easily:
 
-```
-    cd micropcf-workshop
-    wget https://github.com/pivotal-cf/micropcf/releases/download/v0.6.0/micropcf-v0.6.0.zip
-    unzip micropcf-v0.6.0.zip
-    cd micropcf-v0.6.0
-```
+Login to https://network.pivotal.io/products/pcfdev#/releases/1710 and download pcfdev-v0.15.0
 
 Now you need to download 4 GB box, which will take a while
 
 ```
+    unzip pcfdev-*
+    cd pcfdev
     vagrant up
     
 ```
@@ -29,7 +26,7 @@ Once you got successfully you can create a bash script for ease of use
 
 ```
     #!/bin/bash
-    cf api api.local.micropcf.io --skip-ssl-validation
+    cf api api.local.pcfdev.io --skip-ssl-validation
     cf login -u admin -p admin
 ```
 
@@ -45,21 +42,12 @@ Test 1st spring-boot app
 
 Done
 
-Bonus install micropcf base without service brokers:
-
-```
-    cd micropcf-workshop
-    wget https://micropcf.s3.amazonaws.com/releases/base-v0.6.0.zip
-    unzip base-*
-    cd base-*
-    vagrant up
-```    
-
-
 Troubleshooting:
 if you have trouble with networking you can follow belloe guides
     
 https://passingcuriosity.com/2013/dnsmasq-dev-osx/
+
+https://docs.pivotal.io/pcf-dev/work-offline.html
 
 Linux:
     sudo invoke-rc.d dnsmasq restart
