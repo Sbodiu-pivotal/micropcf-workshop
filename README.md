@@ -1,12 +1,9 @@
 # PCFDev Workshop
 Getting Started with PCFDev
 
-
-PCFDev
 >PCFDev is the simplest way to get a complete Cloud Foundry on a single machine
 
 Get in touch with team [GitHub](https://github.com/pivotal-cf/pcfdev) [Slack](https://pivotal.slack.com/messages/pcfdev/)
-
 
 Setup
 You can set up pcfdev to easily:
@@ -41,6 +38,12 @@ Test 1st spring-boot app
 ```
 
 Done
+
+alternatively you can use the latest Atlas release
+
+```
+    vagrant init pcfdev/pcfdev; vagrant up --provider virtualbox
+```
 
 Troubleshooting:
 if you have trouble with networking you can follow belloe guides
