@@ -1,0 +1,3 @@
+#!/bin/bash
+cf api api.local.pcfdev.io --skip-ssl-validation
+cf login -u admin -p admin
